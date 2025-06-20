@@ -1,0 +1,13 @@
+/* style.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+}
+canvas {
+    display: block;
+}
+#info-panel {
+    transition: all 0.3s ease;
+}
