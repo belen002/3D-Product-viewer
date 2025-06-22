@@ -12,6 +12,7 @@ export function setupInteraction(
   renderer,
   scene,
   camera,
+  controls,
   canvasElement = renderer.domElement
 ) {
   // === CLICK EVENT ===
@@ -32,7 +33,7 @@ export function setupInteraction(
         animateClickFeedback(clicked);
 
         if (["Plate", "Orange"].includes(clicked.userData.name)) {
-            console.log("zoom working")
+          console.log("zoom working");
           zoomToObject(camera, controls, clicked);
         }
       }

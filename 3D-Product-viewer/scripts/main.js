@@ -8,7 +8,14 @@ import { setupCameraAnimation } from "./cameraAnimation.js";
 const { scene, camera, renderer, controls } = initScene();
 addLighting(scene);
 createProduct(scene);
-setupInteraction(renderer, scene, camera); 
+setupInteraction(renderer, scene, camera,controls); 
+setTimeout(() => {
+  camera.position.set(1, 2, 3); // move closer
+  controls.target.set(0, 1, 0); // look at plate/orange center
+  controls.update();
+  console.log("✅ Camera moved!");
+}, 2000);
+
 const cameraAnimator = setupCameraAnimation(camera, controls);
 
 let lastTime = performance.now();
